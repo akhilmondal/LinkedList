@@ -15,6 +15,16 @@ public class LinkedList<Q> {
             head = newNode;
         }
     }
+    public void append(Q data) {
+        Node<Q> newNode = new Node(data);
+        if (head == null) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            tail.next = newNode;
+            tail = newNode;
+        }
+    }
 
     public void display() {
         Node<Q> temp = head;
