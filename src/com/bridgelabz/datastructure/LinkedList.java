@@ -31,6 +31,13 @@ public class LinkedList<Q> {
         head.next=newnode;
         newnode.next=tail;
     }
+    public void pop() { // To delete the first element of the LinkedList pop method is used.
+        if (head == null) {
+            System.out.println("Empty linked list");
+            return;
+        }
+        head = head.next;
+    }
     public void display() {
         Node<Q> temp = head;
         while (temp != null) {
