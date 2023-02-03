@@ -15,6 +15,7 @@ public class LinkedList<Q> {
             head = newNode;
         }
     }
+
     public void append(Q data) {
         Node<Q> newNode = new Node(data);
         if (head == null) {
@@ -25,7 +26,11 @@ public class LinkedList<Q> {
             tail = newNode;
         }
     }
-
+    public void insertBetween(Q insertData) {
+        Node<Q> newnode= new Node<>(insertData);
+        head.next=newnode;
+        newnode.next=tail;
+    }
     public void display() {
         Node<Q> temp = head;
         while (temp != null) {
@@ -34,5 +39,4 @@ public class LinkedList<Q> {
         }
         System.out.println();
     }
-
 }
