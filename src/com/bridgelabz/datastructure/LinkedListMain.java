@@ -24,5 +24,8 @@ public class LinkedListMain {
         linkedList3.insertBetween(30);
         System.out.println("After insertion");
         linkedList3.display();
+        System.out.println("After deleting the first node");
+        linkedList3.pop();
+        linkedList3.display();
     }
 }
