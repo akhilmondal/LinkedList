@@ -4,7 +4,7 @@ public class LinkedListMain {
 
     public static void main(String[] args) {
 
-        LinkedList<Integer> linkedList1 = new LinkedList();
+        LinkedList<Integer> linkedList1 = new LinkedList<Integer>();
         linkedList1.push(70);
         linkedList1.push(30);
         linkedList1.push(56);
@@ -27,5 +27,12 @@ public class LinkedListMain {
         System.out.println("After deleting the first node");
         linkedList3.pop();
         linkedList3.display();
+        LinkedList<Integer> linkedList4 = new LinkedList<Integer>();
+        linkedList4.append(56);
+        linkedList4.append(30);
+        linkedList4.append(70);
+        linkedList4.poplast();
+        System.out.println("After deleting last node");
+        linkedList4.display();
     }
 }

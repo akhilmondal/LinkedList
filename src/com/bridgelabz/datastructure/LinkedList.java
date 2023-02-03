@@ -38,6 +38,16 @@ public class LinkedList<Q> {
         }
         head = head.next;
     }
+    public Q poplast() {
+        Q popData = tail.data;
+        Node <Q> temp = head;
+        while (temp.next != tail){
+            temp = temp.next;
+        }
+        temp.next = null;
+        tail = temp;
+        return popData;
+    }
     public void display() {
         Node<Q> temp = head;
         while (temp != null) {
